@@ -1,3 +1,4 @@
+
 (function(){
 
     let body = document.querySelector('body');
@@ -28,9 +29,36 @@
             const output = document.createElement('div');
             body.appendChild(output);
 
+            let image = "<img src='" + avatar + "'>";
+            let imageHolder = document.createElement('div');
+            imageHolder.setAttribute('class', 'imageHolder');
+            output.appendChild(imageHolder);
+            image.innerHTML = image;
 
-            output.innerHTML = name, desc;
-        //    console.log(name, desc)
+
+
+            output.innerHTML = "<h2 style='margin-bottom: 0'>" + name +  "</h2>" +  desc;
+
+            let topicsHolder = document.createElement('div');
+            topicsHolder.setAttribute('class', 'topicHolder');
+            output.appendChild(
+                topicsHolder
+            );
+            topicsHolder.style.flexWrap = "wrap";
+            
+            for(j = 0; j < topics.length; j++){
+                let topic = document.createElement('div');
+                topic.innerHTML = topics[j];
+                topic.style.backgroundColor = "black";
+                topic.style.color = "white";
+                topic.style.padding = ".25rem";
+                topic.style.borderRadius = "5px";
+                topicsHolder.append(topic);
+            }
+
+            topicsHolder.style.display = "flex";
+            topicsHolder.style.gap = ".5rem";
+            output.style.marginBottom = "1rem";
         }
 
     })
