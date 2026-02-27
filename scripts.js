@@ -11,6 +11,7 @@
     .then( response => response.json())
     .then( data => {
         console.log("Fetching Github data...");
+
         let repos = data.items;
 
         for(const repo of repos){
@@ -28,7 +29,7 @@
             body.appendChild(output);
 
 
-            output.innerHTML = name;
+            output.innerHTML = name, desc;
         //    console.log(name, desc)
         }
 
