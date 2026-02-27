@@ -1,4 +1,10 @@
 (function(){
+
+    let body = document.querySelector('body');
+    let readout = document.createElement('div');
+    readout.setAttribute('id', 'readout');
+    body.appendChild(readout);
+
     let url = 'https://api.github.com/search/repositories?q=stars:%3E1&sort=stars&order=desc&per_page=100';
 
  try  { fetch(url)
@@ -6,7 +12,6 @@
     .then( data => {
         console.log("Fetching Github data...");
         let repos = data.items;
-        // watchers
 
         for(const repo of repos){
             let name = repo.full_name;
@@ -14,14 +19,17 @@
             let forks = repo.forks_count;
             let topics = repo.topics;
             let watchers = repo.watchers;
+            let clone_url = repo.clone_url;
+            let homepage = repo.homepage;
+            let github_link = repo.html_url;
+            let avatar = repo.owner.avatar_url;
 
-            for(let j = 0; j < topics.length; j++){
-                console.log(topics[j]);
-            }
+            const output = document.createElement('div');
+            body.appendChild(output);
 
-            console.log(name, topics);
 
-            
+            output.innerHTML = name;
+        //    console.log(name, desc)
         }
 
     })
