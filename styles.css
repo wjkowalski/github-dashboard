@@ -1,0 +1,82 @@
+:root {
+    font-family: monospace;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+a, a.button {
+    font-size: 1rem;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a.button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px #333;
+    box-shadow: 2px 2px #333;
+    box-shadow: 3px 3px #333;
+    transform: translateY(-2px);
+}
+
+h1 {
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: left;
+    gap: 2rem;
+    margin-bottom: .5rem;
+}
+
+.linksHolder {
+    margin-bottom: .5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.ndHolder {
+    flex: 2;
+}
+
+/* This creates a div that is invisible to sighted readers, but will be read aloud to anyone using a screen reader, because it still appears in the DOM. */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto 3rem auto;
+    border: 2px solid green;
+}
+                    
+
+@media(max-width: 600px){
+
+    .output {
+        width: 100%;
+    }
+    .top {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ndHolder {
+        width: 100%;
+    }
+
+}
+
