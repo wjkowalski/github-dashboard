@@ -22,9 +22,7 @@
                 for (const repo of repos) {
                     let name = repo.full_name;
                     let desc = repo.description;
-                    let forks = repo.forks_count;
                     let topics = repo.topics;
-                    let watchers = repo.watchers;
                     let clone_url = repo.clone_url;
                     let homepage = repo.homepage;
                     let github_link = repo.html_url;
