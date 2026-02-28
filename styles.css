@@ -59,6 +59,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 75%;
+    max-width: 800px;
     margin: 0 auto 3rem auto;
     background-color: #eee;
     padding: 1rem;
@@ -68,7 +69,7 @@ h1 {
 }
                     
 
-@media(max-width: 600px){
+@media(max-width: 800px){
 
     .output {
         width: 100%;
@@ -76,10 +77,19 @@ h1 {
     .top {
         flex-direction: column;
         width: 100%;
+        text-align: center;
     }
 
     .ndHolder {
         width: 100%;
+    }
+    .imHolder {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .linksHolder, .topicsHolder {
+        justify-content: center;
     }
 
 }

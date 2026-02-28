@@ -8,9 +8,6 @@
 
     let url = 'https://api.github.com/search/repositories?q=stars:%3E1&sort=stars&order=desc&per_page=100';
 
-    // function for the Clipboard API
-
-
     try {
         fetch(url)
             .then(response => response.json())
@@ -43,12 +40,11 @@
 
                     // make a container for the image
                     let imHolder = document.createElement('div');
-                    imHolder.class = imHolder;
-                    imHolder.style.maxWidth = "30%";
+                    imHolder.class = 'imHolder';
                     output.append(imHolder);
 
                     // make the image
-                    let image = "<img style='height: 200px; width=200px; border-radius: 25px' src='" + avatar + "'>";
+                    let image = "<img style='class: image; height: 200px; width=200px; border-radius: 25px' src='" + avatar + "'>";
 
                     // put the image in the image container
                     imHolder.innerHTML = image;
@@ -120,7 +116,7 @@
 
                     // build a container for the topics
                     let topicsHolder = document.createElement('div');
-                    topicsHolder.setAttribute('class', 'topicHolder');
+                    topicsHolder.setAttribute('class', 'topicsHolder');
                     topicsHolder.style.flexWrap = "wrap";
 
                     // add the topics holder to output
@@ -130,7 +126,10 @@
 
                     // Topics
                     for (j = 0; j < topics.length; j++) {
-                        let topic = document.createElement('div');
+                        let topic = document.createElement('a');
+                        const query = `topic:${topics[j]}`;
+                        topic.href = `https://github.com/search?q=${encodeURIComponent(query)}&type=repositories`;
+
                         topic.innerHTML = topics[j];
                         topic.style.backgroundColor = "black";
                         topic.style.color = "white";
