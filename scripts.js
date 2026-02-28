@@ -36,7 +36,7 @@
 
                     // make a container for each repo listing
                     const output = document.createElement('div');
-                    output.class = 'output';
+                    output.setAttribute('class', 'output');
 
 
                     body.append(output);

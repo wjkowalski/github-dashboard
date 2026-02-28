@@ -60,7 +60,11 @@ h1 {
     flex-direction: column;
     width: 75%;
     margin: 0 auto 3rem auto;
-    border: 2px solid green;
+    background-color: #eee;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px #ddd;
 }
                     
 
