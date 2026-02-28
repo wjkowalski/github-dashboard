@@ -11,3 +11,5 @@ Think about what other information is available to you in the main search object
 Think about the current colour scheme. How does it make you feel? Would the app be more usable/approachable/friendly if it used different styles?
 
 These are just EXAMPLES. You should try to come up with your own way to improve this dashboard at the same time as you are converting it to your framework.
+
+See the rubric for this assignment for more details.
