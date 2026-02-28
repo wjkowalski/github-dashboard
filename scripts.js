@@ -129,10 +129,7 @@
                         topic.href = `https://github.com/search?q=${encodeURIComponent(query)}&type=repositories`;
 
                         topic.innerHTML = topics[j];
-                        topic.style.backgroundColor = "black";
-                        topic.style.color = "white";
-                        topic.style.padding = ".25rem";
-                        topic.style.borderRadius = "5px";
+                        topic.setAttribute("class", "topic");
                         topicsHolder.append(topic);
                     }
                     topicsHolder.style.display = "flex";
